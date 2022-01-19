@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends GraphNode
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+func _on_node_say_close_request():
+	queue_free()
+"
+
+[node name="node_say" type="GraphNode"]
+margin_right = 256.0
+margin_bottom = 75.0
+title = "Say"
+show_close = true
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterTagContainer" type="HBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 240.0
+margin_bottom = 44.0
+
+[node name="Label" type="Label" parent="CharacterTagContainer"]
+margin_top = 3.0
+margin_right = 85.0
+margin_bottom = 17.0
+text = "Character Tag"
+
+[node name="CharacterTagSelect" type="OptionButton" parent="CharacterTagContainer"]
+margin_left = 89.0
+margin_right = 224.0
+margin_bottom = 20.0
+size_flags_horizontal = 11
+
+[node name="DialgoueTranslationKeyContainer" type="HBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 45.0
+margin_right = 240.0
+margin_bottom = 65.0
+
+[node name="Label" type="Label" parent="DialgoueTranslationKeyContainer"]
+margin_top = 3.0
+margin_right = 39.0
+margin_bottom = 17.0
+text = "Tr Key"
+
+[node name="DialogueTranslationKey" type="TextEdit" parent="DialgoueTranslationKeyContainer"]
+margin_left = 43.0
+margin_right = 224.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+size_flags_horizontal = 3
+
+[connection signal="close_request" from="." to="." method="_on_node_say_close_request"]

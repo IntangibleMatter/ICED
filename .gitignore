@@ -1,0 +1,5 @@
+*.import
+icon.png
+.import/
+default_env.tres
+project.godot
