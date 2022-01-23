@@ -40,6 +40,12 @@ slot/1/left_color = Color( 1, 1, 1, 1 )
 slot/1/right_enabled = false
 slot/1/right_type = 0
 slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color( 1, 1, 1, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
 script = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -76,6 +82,25 @@ margin_bottom = 17.0
 text = "Tr Key"
 
 [node name="DialogueTranslationKey" type="TextEdit" parent="DialgoueTranslationKeyContainer"]
+margin_left = 43.0
+margin_right = 224.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+size_flags_horizontal = 3
+
+[node name="SoundContainer" type="HBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 66.0
+margin_right = 240.0
+margin_bottom = 86.0
+
+[node name="Label" type="Label" parent="SoundContainer"]
+margin_top = 3.0
+margin_right = 39.0
+margin_bottom = 17.0
+text = "Sound"
+
+[node name="Sound" type="TextEdit" parent="SoundContainer"]
 margin_left = 43.0
 margin_right = 224.0
 margin_bottom = 20.0

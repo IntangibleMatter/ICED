@@ -14,14 +14,17 @@ var nodeTypes := {
 func _ready():
 	pass # Replace with function body.
 
-func _input(event) -> void:
-	if event is InputEventMouseButton and event.button_index == 2 and event.pressed:
-		AddNode.set_position(event.position)
-		AddNode.popup()
-		print("AAAAAAAAAA")
-
 
 func _on_AddNode_index_pressed(index:int):
 	var node : GraphNode = nodeTypes[index].instance()
 	node.offset = get_local_mouse_position()
 	GraphEdit.add_child(node)
+
+
+
+
+func _on_GraphEdit_gui_input(event:InputEvent):
+	if event is InputEventMouseButton and event.button_index == 2 and event.pressed:
+		AddNode.set_position(event.position)
+		AddNode.popup()
+		print("AAAAAAAAAA")
