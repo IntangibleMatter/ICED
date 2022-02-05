@@ -25,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 888.0
 margin_bottom = -404.0
-items = [ "Say", null, 0, false, false, 0, 0, null, "", false, "If Else", null, 0, false, false, 1, 0, null, "", false, "Play Animation", null, 0, false, false, 2, 0, null, "", false, "Play Sound", null, 0, false, false, 3, 0, null, "", false, "Wait", null, 0, false, false, 4, 0, null, "", false, "Set Variable", null, 0, false, false, 5, 0, null, "", false, "Cinebars", null, 0, false, false, 6, 0, null, "", false, "Spawn", null, 0, false, false, 7, 0, null, "", false, "Set Property", null, 0, false, false, 8, 0, null, "", false, "Choice", null, 0, false, false, 9, 0, null, "", false, "Set Music", null, 0, false, false, 10, 0, null, "", false ]
+items = [ "Choice", null, 0, false, false, 0, 0, null, "", false, "Cinebars", null, 0, false, false, 1, 0, null, "", false, "If", null, 0, false, false, 2, 0, null, "", false, "Play Animation", null, 0, false, false, 3, 0, null, "", false, "Play Music", null, 0, false, false, 4, 0, null, "", false, "Play Sound", null, 0, false, false, 5, 0, null, "", false, "Say", null, 0, false, false, 6, 0, null, "", false, "Set Property", null, 0, false, false, 7, 0, null, "", false, "Set Variable", null, 0, false, false, 8, 0, null, "", false, "Spawn", null, 0, false, false, 9, 0, null, "", false, "Wait", null, 0, false, false, 10, 0, null, "", false ]
 
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_GraphEdit_connection_request"]
 [connection signal="gui_input" from="GraphEdit" to="." method="_on_GraphEdit_gui_input"]
